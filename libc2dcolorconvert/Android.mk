@@ -14,7 +14,7 @@ endif
 LOCAL_C_INCLUDES := \
     $(TOP)/frameworks/av/include/media/stagefright \
     $(TOP)/frameworks/native/include/media/openmax \
-    $(TOP)/hardware/qcom/display-legacy/libcopybit \
+    $(TOP)/hardware/qcom/display-caf/msm7x27a/libcopybit \
     $(kernel_includes)
 
 LOCAL_SHARED_LIBRARIES := liblog libdl

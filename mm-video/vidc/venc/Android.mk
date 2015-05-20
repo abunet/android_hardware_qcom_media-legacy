@@ -55,13 +55,13 @@ ifneq ($(TARGET_KERNEL_SOURCE),)
 libmm-venc-inc      += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
 endif
 libmm-venc-inc      += $(OMX_VIDEO_PATH)/vidc/common/inc
-libmm-venc-inc      += hardware/qcom/media-legacy/mm-core/inc
-libmm-venc-inc      += hardware/qcom/media-legacy/libstagefrighthw
-libmm-venc-inc      += hardware/qcom/display-legacy/libgralloc
+libmm-venc-inc      += hardware/qcom/media-caf/msm7x27a/mm-core/inc
+libmm-venc-inc      += hardware/qcom/media-caf/msm7x27a/libstagefrighthw
+libmm-venc-inc      += hardware/qcom/display-caf/msm7x27a/libgralloc
 libmm-venc-inc      += frameworks/native/include/media/hardware
 libmm-venc-inc      += frameworks/native/include/media/openmax
-libmm-venc-inc      += hardware/qcom/media-legacy/libc2dcolorconvert
-libmm-venc-inc      += hardware/qcom/display-legacy/libcopybit
+libmm-venc-inc      += hardware/qcom/media-caf/msm7x27a/libc2dcolorconvert
+libmm-venc-inc      += hardware/qcom/display-caf/msm7x27a/libcopybit
 libmm-venc-inc      += frameworks/av/include/media/stagefright
 
 
@@ -102,8 +102,8 @@ ifneq ($(TARGET_KERNEL_SOURCE),)
 mm-venc-test720p-inc            += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
 endif
 mm-venc-test720p-inc            += $(OMX_VIDEO_PATH)/vidc/common/inc
-mm-venc-test720p-inc            += hardware/qcom/media-legacy/mm-core/inc
-mm-venc-test720p-inc            += hardware/qcom/display-legacy/libgralloc
+mm-venc-test720p-inc            += hardware/qcom/media-caf/msm7x27a/mm-core/inc
+mm-venc-test720p-inc            += hardware/qcom/display-caf/msm7x27a/libgralloc
 
 LOCAL_MODULE                    := mm-venc-omx-test720p
 LOCAL_MODULE_TAGS               := optional
@@ -136,7 +136,7 @@ endif
 LOCAL_MODULE                    := mm-video-encdrv-test
 LOCAL_MODULE_TAGS               := optional
 LOCAL_C_INCLUDES                := $(venc-test-inc)
-LOCAL_C_INCLUDES                += hardware/qcom/media-legacy/mm-core/inc
+LOCAL_C_INCLUDES                += hardware/qcom/media-caf/msm7x27a/mm-core/inc
 ifneq ($(TARGET_KERNEL_SOURCE),)
 LOCAL_ADDITIONAL_DEPENDENCIES   := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 endif

@@ -61,17 +61,17 @@ libmm-vdec-inc          := bionic/libc/include
 libmm-vdec-inc          += bionic/libstdc++/include
 libmm-vdec-inc          += $(LOCAL_PATH)/inc 
 libmm-vdec-inc          += $(OMX_VIDEO_PATH)/vidc/common/inc
-libmm-vdec-inc          += hardware/qcom/media-legacy/mm-core/inc
+libmm-vdec-inc          += hardware/qcom/media-caf/msm7x27a/mm-core/inc
 ifneq ($(TARGET_KERNEL_SOURCE),)
 libmm-vdec-inc          += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
 endif
 #DRM include - Interface which loads the DRM library
 libmm-vdec-inc	        += $(OMX_VIDEO_PATH)/DivxDrmDecrypt/inc
-libmm-vdec-inc          += hardware/qcom/display-legacy/libgralloc
-libmm-vdec-inc          += hardware/qcom/display-legacy/libgenlock
+libmm-vdec-inc          += hardware/qcom/display-caf/msm7x27a/libgralloc
+libmm-vdec-inc          += hardware/qcom/display-caf/msm7x27a/libgenlock
 libmm-vdec-inc          += frameworks/native/include/media-legacy/openmax
 libmm-vdec-inc          += frameworks/native/include/media-legacy/hardware
-libmm-vdec-inc          += hardware/qcom/display-legacy/libqservice
+libmm-vdec-inc          += hardware/qcom/display-caf/msm7x27a/libqservice
 
 
 LOCAL_MODULE                    := libOmxVdec
@@ -100,7 +100,7 @@ include $(BUILD_SHARED_LIBRARY)
 # ---------------------------------------------------------------------------------
 include $(CLEAR_VARS)
 
-mm-vdec-test-inc    := hardware/qcom/media-legacy/mm-core/inc
+mm-vdec-test-inc    := hardware/qcom/media-caf/msm7x27a/mm-core/inc
 mm-vdec-test-inc    += $(LOCAL_PATH)/inc
 ifneq ($(TARGET_KERNEL_SOURCE),)
 mm-vdec-test-inc    += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
@@ -128,7 +128,7 @@ include $(BUILD_EXECUTABLE)
 # ---------------------------------------------------------------------------------
 include $(CLEAR_VARS)
 
-mm-vdec-drv-test-inc    := hardware/qcom/media-legacy/mm-core/inc
+mm-vdec-drv-test-inc    := hardware/qcom/media-caf/msm7x27a/mm-core/inc
 mm-vdec-drv-test-inc    += $(LOCAL_PATH)/inc
 ifneq ($(TARGET_KERNEL_SOURCE),)
 mm-vdec-drv-test-inc    += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
